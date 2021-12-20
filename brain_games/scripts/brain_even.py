@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-from random import *
+from random import randint
+
 
 def main():
     print('Welcome to the Brain Games!')
@@ -12,7 +13,7 @@ def main():
     print('Answer "yes" if the number is even, otherwise answer "no".')
     x = 0
     while x < 3:
-        number = randint(0, 100) 
+        number = randint(0, 100)
         print('Question: ' + str(number))
         answer = input()
         if number % 2 == 0:
@@ -20,15 +21,19 @@ def main():
                 print('Correct!')
                 x += 1
             else:
-                print('"yes" is wrong answer ;(. Correct answer was "no". \nLet\'s try again, ' + str(name))
+                print(
+                    '"yes" is wrong answer ;(. Correct answer was "no". '
+                    '\nLet\'s try again, ' + str(name))
                 x = 0
         else:
             if answer == 'no':
                 print('Correct!')
                 x += 1
             else:
-                print('"yes" is wrong answer ;(. Correct answer was "no". \nLet\'s try again, ' + str(name))
-                x = 0 
+                print(
+                    '"yes" is wrong answer ;(. Correct answer was "no". '
+                    '\nLet\'s try again, ' + str(name))
+                x = 0
     print('Congratulations,' + str(name) + '!')
 
 
