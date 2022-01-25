@@ -17,7 +17,7 @@ def main():
         length = randint(6, 10)
         step = randint(7, 15)
         number = randint(5, 20)
-        space = randint(3, length)
+        space = randint(5, length)
         for i in range(1, length + 1):
             if i == space:
                 enigma = '..'
