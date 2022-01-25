@@ -16,7 +16,7 @@ def main():
     print('Answer "yes" if the number is even, otherwise answer "no".')
     x = 0
     while x < 3:
-        number = randint(1, 100)
+        number = int(input('Write your number: '))
         print('Question: ' + str(number))
         answer = input('Your answer: ')
         sleep(1)
