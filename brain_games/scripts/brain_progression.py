@@ -13,19 +13,19 @@ def main():
     print('What number is missing in the progression?')
     x = 0
     while x < 3:
-        progression = []
-        length = randint(6, 10)
-        step = randint(7, 15)
+        progression = ''
+        length = randint(5, 10)
+        step = randint(3, 10)
         number = randint(5, 20)
         space = randint(5, length)
         for i in range(1, length + 1):
             if i == space:
                 enigma = '..'
-                progression.append(enigma)
+                progression = progression + str(enigma) + ' '
                 correct_answer = int(number)
                 number += step
             else:
-                progression.append(number)
+                progression = progression + str(number) + ' '
                 number += step
         print('Question: ' + str(progression))
         answer = int(input('Your answer: '))
