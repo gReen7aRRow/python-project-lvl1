@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from random import randint
-from time import sleep
 
 
 def main():
@@ -10,9 +9,7 @@ def main():
     while name == '':
         print('May I have your name? ', end='')
         name = input()
-        sleep(1)
     print('Hello, ' + str(name) + '!')
-    sleep(1)
     print('What number is missing in the progression?')
     x = 0
     while x < 3:
@@ -32,11 +29,9 @@ def main():
                 number += step
         print('Question: ' + str(progression))
         answer = int(input('Your answer: '))
-        sleep(1)
         if answer == correct_answer:
             print('Correct!')
             x += 1
-            sleep(1)
         else:
             print(
                 '\'' + str(answer) + '\'' + ' is wrong answer ;(. '

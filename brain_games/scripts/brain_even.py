@@ -22,7 +22,8 @@ def main():
                 x += 1
             else:
                 print(
-                    '"' + answer + '" is wrong answer ;(. Correct answer was "yes". '
+                    '"' + answer + '" is wrong answer ;(. '
+                    'Correct answer was "yes". '
                     '\nLet\'s try again, ' + str(name))
                 x = 0
         else:
@@ -31,7 +32,8 @@ def main():
                 x += 1
             else:
                 print(
-                    '"' + answer + '" is wrong answer ;(. Correct answer was "no". '
+                    '"' + answer + '" is wrong answer ;(. '
+                    'Correct answer was "no". '
                     '\nLet\'s try again, ' + str(name))
                 x = 0
     print('Congratulations,' + str(name) + '!')
