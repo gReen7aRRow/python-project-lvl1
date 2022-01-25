@@ -14,7 +14,7 @@ def main():
     x = 0
     while x < 3:
         progression = []
-        length = randint(5, 10)
+        length = randint(6, 10)
         step = randint(7, 15)
         number = randint(5, 20)
         space = randint(3, length)
