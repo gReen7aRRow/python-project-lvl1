@@ -26,7 +26,7 @@ def main():
                     print(
                         '"' + answer + '" is wrong answer ;(. '
                         'Correct answer was "' + correct_answer + '"'
-                        '\nLet\'s try again, ' + str(name))
+                        '\nLet\'s try again, ' + str(name) + '!')
                     break
             else:
                 correct_answer = 'no'
@@ -37,7 +37,7 @@ def main():
                     print(
                         '"' + answer + '" is wrong answer ;(. '
                         'Correct answer was "' + correct_answer + '"'
-                        '\nLet\'s try again, ' + str(name))
+                        '\nLet\'s try again, ' + str(name) + '!')
                     break
         if x < 3:
             pass
