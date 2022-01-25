@@ -36,7 +36,7 @@ def main():
                     'Correct answer was "no". '
                     '\nLet\'s try again, ' + str(name))
                 x = 0
-    print('Congratulations,' + str(name) + '!')
+    print('Congratulations, ' + str(name) + '!')
 
 
 if __name__ == '__main__':
