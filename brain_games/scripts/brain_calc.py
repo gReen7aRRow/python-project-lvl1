@@ -29,7 +29,7 @@ def main():
                     '\'' + str(answer) + '\'' + ' is wrong answer ;(. '
                     'Correct answer was ' + '\'' + str(correct_answer) + '\'. '
                     '\nLet\'s try again, ' + str(name) + '!')
-                x = 0
+                break
         elif operation == '+':
             print('Question: ' + str(number1) + ' + ' + str(number2))
             answer = int(input('Your answer: '))
@@ -42,7 +42,7 @@ def main():
                     '\'' + str(answer) + '\'' + ' is wrong answer ;(. '
                     'Correct answer was ' + '\'' + str(correct_answer) + '\'. '
                     '\nLet\'s try again, ' + str(name) + '!')
-                x = 0
+                break
         elif operation == '*':
             print('Question: ' + str(number1) + ' * ' + str(number2))
             answer = int(input('Your answer: '))
@@ -55,8 +55,12 @@ def main():
                     '\'' + str(answer) + '\'' + ' is wrong answer ;(. '
                     'Correct answer was ' + '\'' + str(correct_answer) + '\'. '
                     '\nLet\'s try again, ' + str(name) + '!')
-                x = 0
-    print('Congratulations, ' + str(name) + '!')
+                break
+        if x < 3:
+            pass
+        elif x == 3:
+            print('Congratulations, ' + str(name) + '!')
+            break
 
 
 if __name__ == '__main__':
