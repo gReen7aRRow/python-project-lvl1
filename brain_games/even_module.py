@@ -10,35 +10,28 @@ def game():
     print(
         'Hello, ' + str(name) + '! '
         '\nAnswer "yes" if the number is even, otherwise answer "no".')
-    x = 0
-    while x <= 5:
+    for x in range(0, 3):
         number = randint(1, 20)
         print('Question: ' + str(number))
         answer = input('Your answer: ')
         if number % 2 == 0:
-            correct_answer = 'yes'
-            if answer == correct_answer:
+            if answer == 'yes':
                 print('Correct!')
                 x += 1
             else:
                 print(
-                    '"' + answer + '" is wrong answer ;(. '
-                    'Correct answer was "' + correct_answer + '"'
+                    '"no" is wrong answer ;(. Correct answer was "yes" '
                     '\nLet\'s try again, ' + str(name) + '!')
                 break
         else:
-            correct_answer = 'no'
-            if answer == correct_answer:
+            if answer == 'no':
                 print('Correct!')
                 x += 1
             else:
                 print(
-                    '"' + answer + '" is wrong answer ;(. '
-                    'Correct answer was "' + correct_answer + '"'
+                    '"yes" is wrong answer ;(. Correct answer was "no" '
                     '\nLet\'s try again, ' + str(name) + '!')
                 break
-        if x < 3:
-            pass
-        elif x == 3:
+        if x == 3:
             print('Congratulations, ' + str(name) + '!')
             break
