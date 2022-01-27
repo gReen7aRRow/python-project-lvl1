@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 
 from random import randint
+import prompt
 
 
 def game():
     print('Welcome to the Brain Games!')
-    name = ''
-    while name == '':
-        print('May I have your name? ', end='')
-        name = input()
-    print('Hello, ' + str(name) + '!')
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    name = prompt.string('May I have your name? ')
+    print(
+        'Hello, ' + str(name) + '! '
+        '\nAnswer "yes" if the number is even, otherwise answer "no".')
     x = 0
     while x <= 5:
         number = randint(1, 20)
