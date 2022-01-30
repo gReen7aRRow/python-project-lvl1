@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 
 from random import randint
+import prompt
 
 
 def main():
     print('Welcome to the Brain Games!')
-    name = ''
-    while name == '':
-        print('May I have your name? ', end='')
-        name = input()
-    print('Hello, ' + str(name) + '!')
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    name = prompt.string('May I have your name? ')
+    print(
+        'Hello, ' + str(name) + '! '
+        '\nAnswer "yes" if given number is prime. Otherwise answer "no".')
     x = 0
     while x < 3:
         number = randint(3, 50)

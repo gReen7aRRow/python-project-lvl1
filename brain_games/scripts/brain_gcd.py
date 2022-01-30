@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 
 from random import randint
+import prompt
 
 
 def main():
     print('Welcome to the Brain Games!')
-    name = ''
-    while name == '':
-        print('May I have your name? ', end='')
-        name = input()
-    print('Hello, ' + str(name) + '!')
-    print('Find the greatest common divisor of given numbers.')
+    name = prompt.string('May I have your name? ')
+    print(
+        'Hello, ' + str(name) + '! '
+        '\nFind the greatest common divisor of given numbers.')
     x = 0
     while x < 3:
         number1 = randint(1, 50)

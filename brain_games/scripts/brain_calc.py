@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 
 from random import randint, choice
+import prompt
 
 
 def main():
     print('Welcome to the Brain Games!')
-    name = ''
-    while name == '':
-        print('May I have your name? ', end='')
-        name = input()
-    print('Hello, ' + str(name) + '!')
-    print('What is the result of the expression?')
+    name = prompt.string('May I have your name? ')
+    print(
+        'Hello, ' + str(name) + '! '
+        '\nWhat is the result of the expression?')
     x = 0
     while x < 3:
         number1 = randint(0, 50)
