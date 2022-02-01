@@ -14,19 +14,15 @@ def main():
     while x < 3:
         number1 = randint(0, 50)
         number2 = randint(0, 50)
-        mark = ['-', '+', '*']
+        mark = [' - ', ' + ', ' * ']
         operation = choice(mark)
-        if operation == '-':
-            print('Question: ' + str(number1) + ' - ' + str(number2))
-            answer = int(input('Your answer: '))
+        print('Question: ' + str(number1) + str(operation) + str(number2))
+        answer = int(input('Your answer: '))
+        if operation == ' - ':
             correct_answer = number1 - number2
-        elif operation == '+':
-            print('Question: ' + str(number1) + ' + ' + str(number2))
-            answer = int(input('Your answer: '))
+        elif operation == ' + ':
             correct_answer = number1 + number2
-        elif operation == '*':
-            print('Question: ' + str(number1) + ' * ' + str(number2))
-            answer = int(input('Your answer: '))
+        elif operation == ' * ':
             correct_answer = number1 * number2
         if answer == correct_answer:
             print('Correct!')
