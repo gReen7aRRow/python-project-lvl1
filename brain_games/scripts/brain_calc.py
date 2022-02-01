@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from random import randint, choice
+from random import randint
 import prompt
 
 
@@ -14,16 +14,14 @@ def main():
     while x < 3:
         number1 = randint(0, 50)
         number2 = randint(0, 50)
+        var = randint(0, 2)
         mark = [' - ', ' + ', ' * ']
-        operation = choice(mark)
-        print('Question: ' + str(number1) + str(operation) + str(number2))
+        operation = [
+            number1 - number2, number1 + number2,
+            number1 * number2]
+        correct_answer = int(operation[var])
+        print('Question: ' + str(number1) + str(mark[var]) + str(number2))
         answer = int(input('Your answer: '))
-        if operation == ' - ':
-            correct_answer = number1 - number2
-        elif operation == ' + ':
-            correct_answer = number1 + number2
-        elif operation == ' * ':
-            correct_answer = number1 * number2
         if answer == correct_answer:
             print('Correct!')
             x += 1
