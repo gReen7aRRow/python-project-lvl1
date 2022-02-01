@@ -20,44 +20,24 @@ def main():
             print('Question: ' + str(number1) + ' - ' + str(number2))
             answer = int(input('Your answer: '))
             correct_answer = number1 - number2
-            if answer == correct_answer:
-                print('Correct!')
-                x += 1
-            else:
-                print(
-                    '\'' + str(answer) + '\'' + ' is wrong answer ;(. '
-                    'Correct answer was ' + '\'' + str(correct_answer) + '\'. '
-                    '\nLet\'s try again, ' + str(name) + '!')
-                break
         elif operation == '+':
             print('Question: ' + str(number1) + ' + ' + str(number2))
             answer = int(input('Your answer: '))
             correct_answer = number1 + number2
-            if answer == correct_answer:
-                print('Correct!')
-                x += 1
-            else:
-                print(
-                    '\'' + str(answer) + '\'' + ' is wrong answer ;(. '
-                    'Correct answer was ' + '\'' + str(correct_answer) + '\'. '
-                    '\nLet\'s try again, ' + str(name) + '!')
-                break
         elif operation == '*':
             print('Question: ' + str(number1) + ' * ' + str(number2))
             answer = int(input('Your answer: '))
             correct_answer = number1 * number2
-            if answer == correct_answer:
-                print('Correct!')
-                x += 1
-            else:
-                print(
-                    '\'' + str(answer) + '\'' + ' is wrong answer ;(. '
-                    'Correct answer was ' + '\'' + str(correct_answer) + '\'. '
-                    '\nLet\'s try again, ' + str(name) + '!')
-                break
-        if x < 3:
-            pass
-        elif x == 3:
+        if answer == correct_answer:
+            print('Correct!')
+            x += 1
+        else:
+            print(
+                '\'' + str(answer) + '\'' + ' is wrong answer ;(. '
+                'Correct answer was ' + '\'' + str(correct_answer) + '\'. '
+                '\nLet\'s try again, ' + str(name) + '!')
+            break
+        if x == 3:
             print('Congratulations, ' + str(name) + '!')
             break
 
