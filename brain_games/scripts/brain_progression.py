@@ -37,9 +37,7 @@ def main():
                 'Correct answer was ' + '\'' + str(correct_answer) + '\'. '
                 '\nLet\'s try again, ' + str(name) + '!')
             break
-        if x < 3:
-            pass
-        elif x == 3:
+        if x == 3:
             print('Congratulations, ' + str(name) + '!')
             break
 
