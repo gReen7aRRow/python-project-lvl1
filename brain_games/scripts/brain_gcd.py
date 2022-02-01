@@ -17,11 +17,8 @@ def main():
         print('Question: ' + str(number1) + ' ' + str(number2))
         answer = int(input('Your answer: '))
         while correct_answer > 0:
-            if number1 % correct_answer == number2 % correct_answer:
-                if number1 % correct_answer == 0:
-                    break
-                else:
-                    correct_answer -= 1
+            if number1 % correct_answer == number2 % correct_answer == 0:
+                break
             else:
                 correct_answer -= 1
         if answer == correct_answer:
