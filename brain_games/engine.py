@@ -17,7 +17,8 @@ def run(game):
             print('Correct!')
             x += 1
         else:
-            print("".join([
+            print(
+                "".join([
                         '\'', str(answer), '\'', ' is wrong answer ;(. '
                         'Correct answer was ', '\'', str(correct_answer),
                         '\'. \nLet\'s try again, ', str(name) + '!']))
