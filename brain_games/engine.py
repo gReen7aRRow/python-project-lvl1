@@ -6,8 +6,7 @@ import prompt
 def run(game):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
-    print("".join(['Hello, ', str(name), '! ']))
-    print(game.DESCRIPTION)
+    print("".join(['Hello, ', str(name), '! ', '\n', game.DESCRIPTION]))
     x = 0
     while x < 3:
         correct_answer, case = game.get_question_and_answer()
