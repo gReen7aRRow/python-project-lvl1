@@ -5,7 +5,7 @@ DESCRIPTION = 'What number is missing in the progression? '
 
 def get_question_and_answer():
     correct_answer, question = generate_progression()
-    return correct_answer, question
+    return correct_answer, str(question)
 
 
 def generate_progression():
