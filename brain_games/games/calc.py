@@ -1,18 +1,21 @@
-#!/usr/bin/env python3
-
 from random import randint
 
 DESCRIPTION = 'What is the result of the expression? '
 
 
 def get_question_and_answer():
-    number1 = randint(0, 50)
-    number2 = randint(0, 50)
-    var = randint(0, 2)
+    a = randint(0, 50)
+    b = randint(0, 50)
     mark = [' - ', ' + ', ' * ']
+    correct_answer, question = calc(a, b, mark)
+    return correct_answer, question
+
+
+def calc(a, b, mark):
+    var = randint(0, 2)
     operation = [
-        number1 - number2, number1 + number2,
-        number1 * number2]
+        a - b, a + b,
+        a * b]
     correct_answer = int(operation[var])
-    case = str(number1) + str(mark[var]) + str(number2)
-    return correct_answer, case
+    question = str(a) + str(mark[var]) + str(b)
+    return correct_answer, question

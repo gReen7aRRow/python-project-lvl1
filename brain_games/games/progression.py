@@ -1,12 +1,15 @@
-#!/usr/bin/env python3
-
 from random import randint
 
 DESCRIPTION = 'What number is missing in the progression? '
 
 
 def get_question_and_answer():
-    case = ''
+    correct_answer, question = generate_progression()
+    return correct_answer, question
+
+
+def generate_progression():
+    progression = ''
     length = randint(5, 10)
     step = randint(3, 10)
     number = randint(5, 20)
@@ -14,10 +17,10 @@ def get_question_and_answer():
     for i in range(1, length + 1):
         if i == space:
             enigma = '..'
-            case = case + str(enigma) + ' '
+            progression = " ".join([progression, enigma])
             correct_answer = int(number)
             number += step
         else:
-            case = case + str(number) + ' '
+            progression = " ".join([progression, str(number)])
             number += step
-    return correct_answer, case
+    return correct_answer, progression
