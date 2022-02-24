@@ -10,7 +10,7 @@ def get_question_and_answer():
 
 def generate_progression():
     progression = ''
-    length = randint(5, 10)
+    length = randint(10, 15)
     step = randint(3, 10)
     number = randint(5, 20)
     space = randint(5, length)
