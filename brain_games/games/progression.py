@@ -4,23 +4,21 @@ DESCRIPTION = 'What number is missing in the progression? '
 
 
 def get_question_and_answer():
-    correct_answer, question = generate_progression()
-    return correct_answer, str(question)
-
-
-def generate_progression():
-    progression = ''
-    length = randint(10, 15)
+    long = randint(7, 12)
     step = randint(3, 10)
-    number = randint(5, 20)
-    space = randint(5, length)
-    for i in range(1, length + 1):
-        if i == space:
-            enigma = '..'
-            progression = " ".join([progression, enigma])
-            correct_answer = int(number)
-            number += step
-        else:
-            progression = " ".join([progression, str(number)])
-            number += step
+    first_number = randint(5, 20)
+    correct_answer, progression = generate_progression(
+        long, step, first_number)
+    question = str(progression)
+    return correct_answer, question
+
+
+def generate_progression(long, step, first_number):
+    progression = []
+    for i in range(1, long + 1):
+        progression.append(first_number)
+        first_number += step
+    enigma = randint(5, long - 1)
+    correct_answer = progression[enigma]
+    progression[enigma] = '..'
     return correct_answer, progression
