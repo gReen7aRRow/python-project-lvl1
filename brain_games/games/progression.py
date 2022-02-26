@@ -14,13 +14,12 @@ def get_question_and_answer():
 
 
 def generate_progression(long, step, element, enigma):
-    progression = ''
+    progression = element
     for i in range(1, long + 1):
+        element += step
         if i == enigma:
-            progression = " ".join([progression, '..'])
+            progression = " ".join([str(progression), '..'])
             correct_answer = element
-            element += step
         else:
-            progression = " ".join([progression, str(element)])
-            element += step
+            progression = " ".join([str(progression), str(element)])
     return correct_answer, progression
