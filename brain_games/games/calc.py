@@ -16,6 +16,6 @@ def calc(a, b, mark):
     operation = [
         a - b, a + b,
         a * b]
-    correct_answer = int(operation[var])
+    correct_answer = randint(0, 50)
     question = str(a) + str(mark[var]) + str(b)
     return correct_answer, question
