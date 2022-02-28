@@ -8,18 +8,18 @@ def get_question_and_answer():
     step = randint(3, 10)
     element = randint(5, 20)
     enigma = randint(5, long - 1)
-    correct_answer, question = generate_progression(
-        long, step, element, enigma)
+    progression = generate_progression(long, step, element)
+    for index, item in enumerate(progression):
+        if index == enigma:
+            correct_answer = progression[index]
+            progression[index] = '..'
+            question = str(progression)
     return correct_answer, question
 
 
-def generate_progression(long, step, element, enigma):
-    progression = element
+def generate_progression(long, step, element):
+    progression = []
     for i in range(1, long + 1):
+        progression.append(element)
         element += step
-        if i == enigma:
-            progression = " ".join([str(progression), '..'])
-            correct_answer = element
-        else:
-            progression = " ".join([str(progression), str(element)])
-    return correct_answer, progression
+    return progression
